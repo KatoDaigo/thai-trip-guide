@@ -1,16 +1,11 @@
-/* 全体のリセット */
+/* ======== 全体のスタイル ======== */
 body,
-h1,
-p,
-ul,
-li {
+html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-}
-
-body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* 横スクロールを防ぐ */
+  background-color: #f8f8f8;
 }
 
 /* フェードインアニメーション */
@@ -28,21 +23,21 @@ body {
   }
 }
 
-/* 背景画像（国旗＆風景の2枚表示） */
+/* ======== ヒーローセクション（タイトル部分） ======== */
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  padding: 50px 20px; /* 余白を確保 */
   position: relative;
   color: white;
   font-size: 20px;
-  padding-bottom: 80px; /* 下に余白を作る */
+  min-height: 100vh; /* 最小で画面いっぱい、スクロール可能 */
 }
 
-/* 背景画像を正しく2枚表示 */
+/* 背景画像（国旗＆風景を2枚並べる） */
 .hero::before {
   content: "";
   position: absolute;
@@ -56,15 +51,33 @@ body {
   z-index: -1;
 }
 
-/* メンバーの名前を下に配置 */
+/* ======== メンバーの名前 ======== */
 .members {
-  margin-top: 80px; /* ここで名前を下げる */
+  margin-top: 50px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
 }
 
-/* ハンバーガーメニュー */
+/* ======== メンバーの写真（横並びにする） ======== */
+.member-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* 写真の間隔 */
+  margin-top: 50px;
+  flex-wrap: wrap; /* スマホ対応 */
+}
+
+.member-photos img {
+  width: 150px; /* 写真のサイズ */
+  height: auto;
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつける */
+  object-fit: cover;
+}
+
+/* ======== ハンバーガーメニュー ======== */
 .menu-icon {
   position: fixed;
   top: 20px;
@@ -83,7 +96,7 @@ body {
   background: rgba(0, 0, 0, 1);
 }
 
-/* サイドメニュー */
+/* ======== サイドメニュー（ナビゲーション） ======== */
 .side-menu {
   position: fixed;
   top: 0;
@@ -119,7 +132,14 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* 📱 スマホ対応 */
+/* ======== スクロール可能にするための調整 ======== */
+.content {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/* ======== 📱 スマホ対応 ======== */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 30px;
@@ -134,8 +154,16 @@ body {
   }
 
   .members {
-    margin-top: 60px; /* スマホでは少し上げる */
+    margin-top: 40px;
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  .member-photos {
+    gap: 50px;
+  }
+
+  .member-photos img {
+    width: 120px; /* スマホで少し小さめに */
   }
 }
