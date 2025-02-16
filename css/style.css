@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* フェードインアニメーション（ページ遷移時） */
+/* フェードインアニメーション */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
@@ -28,7 +28,7 @@ body {
   }
 }
 
-/* 背景（国旗と風景） */
+/* 背景画像（国旗＆風景の2枚表示） */
 .hero {
   display: flex;
   flex-direction: column;
@@ -39,9 +39,10 @@ body {
   position: relative;
   color: white;
   font-size: 20px;
+  padding-bottom: 80px; /* 下に余白を作る */
 }
 
-/* 背景パララックス */
+/* 背景画像を正しく2枚表示 */
 .hero::before {
   content: "";
   position: absolute;
@@ -53,14 +54,14 @@ body {
     url("../img/country.png") left center/50% 100% no-repeat,
     url("../img/view.png") right center/50% 100% no-repeat;
   z-index: -1;
-  background-attachment: fixed;
 }
 
-/* メンバーの名前 */
+/* メンバーの名前を下に配置 */
 .members {
-  margin-top: 10px;
+  margin-top: 80px; /* ここで名前を下げる */
   font-size: 18px;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 /* ハンバーガーメニュー */
@@ -82,28 +83,18 @@ body {
   background: rgba(0, 0, 0, 1);
 }
 
-/* サイドメニュー（スクロール対応） */
+/* サイドメニュー */
 .side-menu {
   position: fixed;
   top: 0;
   left: -250px;
   width: 250px;
   height: 100vh;
-  overflow-y: auto; /* スクロール対応 */
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.9);
   transition: left 0.4s ease-in-out;
   padding-top: 50px;
   z-index: 1000;
-}
-
-/* メニューのスクロールバー */
-.side-menu::-webkit-scrollbar {
-  width: 8px;
-}
-
-.side-menu::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
 }
 
 .side-menu ul {
@@ -128,7 +119,7 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* 📱 レスポンシブ対応 */
+/* 📱 スマホ対応 */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 30px;
@@ -140,5 +131,11 @@ body {
 
   .hero::before {
     background: url("../img/view.png") center center/cover no-repeat;
+  }
+
+  .members {
+    margin-top: 60px; /* スマホでは少し上げる */
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
