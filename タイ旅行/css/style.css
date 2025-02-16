@@ -1,0 +1,144 @@
+/* 全体のリセット */
+body,
+h1,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* フェードインアニメーション（ページ遷移時） */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 背景（国旗と風景） */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+  font-size: 20px;
+}
+
+/* 背景パララックス */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/country.png") left center/50% 100% no-repeat,
+    url("../img/view.png") right center/50% 100% no-repeat;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+/* メンバーの名前 */
+.members {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ハンバーガーメニュー */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+/* サイドメニュー（スクロール対応） */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto; /* スクロール対応 */
+  background: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  padding-top: 50px;
+  z-index: 1000;
+}
+
+/* メニューのスクロールバー */
+.side-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 📱 レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero::before {
+    background: url("../img/view.png") center center/cover no-repeat;
+  }
+}
