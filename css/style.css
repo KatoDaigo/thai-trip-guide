@@ -34,7 +34,7 @@ html {
   position: relative;
   color: white;
   font-size: 20px;
-  min-height: 100vh; /* 最小で画面いっぱい、スクロール可能 */
+  min-height: 100vh;
 }
 
 /* 背景画像（国旗＆風景を2枚並べる） */
@@ -59,22 +59,55 @@ html {
   line-height: 1.5;
 }
 
-/* ======== メンバーの写真（横並びにする） ======== */
+/* ======== メンバーの写真を上下そろえてコロッと入るようにする ======== */
 .member-photos {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* 縦の高さを確保 */
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* 写真の間隔 */
-  margin-top: 50px;
-  flex-wrap: wrap; /* スマホ対応 */
+  gap: 30px; /* 写真同士の間隔 */
+}
+
+/* コロッと入るアニメーション */
+@keyframes popIn {
+  from {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .member-photos img {
-  width: 150px; /* 写真のサイズ */
+  width: 120px;
   height: auto;
-  border-radius: 10px; /* 角を丸く */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつける */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  opacity: 0; /* 最初は非表示 */
+  animation: popIn 1s ease-out forwards;
+}
+
+/* 画像を綺麗に整列 ＆ ちょっとランダム感 */
+.member-photos img:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.member-photos img:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.member-photos img:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.member-photos img:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.member-photos img:nth-child(5) {
+  animation-delay: 1.5s;
 }
 
 /* ======== ハンバーガーメニュー ======== */
@@ -132,27 +165,36 @@ html {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* ======== スクロール可能にするための調整 ======== */
-.content {
-  padding: 50px 20px;
+/* ======== おみくじボタン（面白要素） ======== */
+.fortune {
   text-align: center;
-  background-color: white;
+  margin-top: 30px;
+}
+
+.fortune button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.fortune button:hover {
+  background: #ff9900;
+  transform: scale(1.1);
+}
+
+#fortune-result {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff6600;
 }
 
 /* ======== 📱 スマホ対応 ======== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero::before {
-    background: url("../img/view.png") center center/cover no-repeat;
-  }
-
   .members {
     margin-top: 40px;
     font-size: 16px;
@@ -160,10 +202,10 @@ html {
   }
 
   .member-photos {
-    gap: 50px;
+    gap: 20px;
   }
 
   .member-photos img {
-    width: 120px; /* スマホで少し小さめに */
+    width: 100px;
   }
 }
