@@ -1,191 +1,158 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>おまけ - タイ旅行</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🎁 おまけ（もっと楽しむために！）</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
-
-        <hr class="line-style-1">
-
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+    <!-- メンバー紹介 -->
+    <section class="members">
+      <h2>🧑‍🤝‍🧑 メンバー紹介</h2>
+      <div class="member-list">
+        <div class="member">
+          <img src="../img/daigo/daigo2.png" alt="加藤大吾" />
+          <p>🕶️ **加藤大吾** - リーダーの言うことは全部従う！</p>
         </div>
-        <p class="p-last">©TOTALLY</p>
+        <div class="member">
+          <img src="../img/koei/koei4.png" alt="大野晃英" />
+          <p>🎤 **大野晃英** - きれすぎ注意、頼れる海外好き</p>
+        </div>
+        <div class="member">
+          <img src="../img/shori/shori3.png" alt="佐藤翔理" />
+          <p>🍣 **佐藤翔理** - 遅刻魔なので要注意！</p>
+        </div>
+        <div class="member">
+          <img src="../img/hiroto/hiroto4.png" alt="川合啓斗" />
+          <p>🏃 **川合啓斗** - ネガティブ、寝過ぎ注意</p>
+        </div>
+        <div class="member">
+          <img src="../img/yusei/yusei3.png" alt="白木勇成" />
+          <p>🎮 **白木勇成** - 翔理の残飯処理担当、お金減らしすぎ注意</p>
+        </div>
+      </div>
+    </section>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+    <section class="missions">
+      <h2>🎯 旅のミッション！</h2>
+      <p>クリックで詳細が開くよ！</p>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+      <div class="mission-container">
+        <!-- バンコク編 -->
+        <h3 class="mission-title" onclick="toggleMission('bangkok')">
+          🏙️ バンコク編
+        </h3>
+        <ul id="bangkok" class="mission-list">
+          <li>
+            🛶 <span>水上マーケットでボートに乗る</span>
+            <p class="mission-detail">現地のローカルフードも挑戦！？</p>
+          </li>
+          <li>
+            💰 <span>トゥクトゥクの値段交渉で50%オフ成功</span>
+            <p class="mission-detail">最初に言われた金額の半額からスタート！</p>
+          </li>
+          <li>
+            👜 <span>MBKセンターで「偽物」を買う</span>
+            <p class="mission-detail">ブランドもどきを見つけられるか！？</p>
+          </li>
+          <li>
+            🐘 <span>ゾウと遊ぶ & 記念写真を撮る</span>
+            <p class="mission-detail">触れ合い体験で癒されよう！</p>
+          </li>
+          <li>
+            🍢 <span>屋台で「虫料理」を食べる</span>
+            <p class="mission-detail">勇気を出して挑戦！？</p>
+          </li>
+          <li>
+            🏯 <span>ワット・ポーで「涅槃像」を見る</span>
+            <p class="mission-detail">黄金の巨大仏像は必見！</p>
+          </li>
+        </ul>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+        <!-- プーケット編 -->
+        <h3 class="mission-title" onclick="toggleMission('phuket')">
+          🏝️ プーケット編
+        </h3>
+        <ul id="phuket" class="mission-list">
+          <li>
+            🍹 <span>ビーチバーで南国カクテルを楽しむ</span>
+            <p class="mission-detail">リゾート気分MAX！</p>
+          </li>
+          <li>
+            🌅 <span>プロムテープ岬で夕日を見る</span>
+            <p class="mission-detail">絶景スポットでのんびり！</p>
+          </li>
+          <li>
+            🦞 <span>シーフードレストランで豪華なディナー</span>
+            <p class="mission-detail">新鮮なエビ・カニを堪能！</p>
+          </li>
+        </ul>
+
+        <!-- ピピ島編 -->
+        <h3 class="mission-title" onclick="toggleMission('pipi')">
+          🌴 ピピ島編
+        </h3>
+        <ul id="pipi" class="mission-list">
+          <li>
+            ⛵ <span>ロングテールボートで秘境ビーチへ</span>
+            <p class="mission-detail">クリアブルーの海を楽しもう！</p>
+          </li>
+          <li>
+            🐢 <span>シュノーケリングでウミガメを探す</span>
+            <p class="mission-detail">見つけられたらラッキー！</p>
+          </li>
+          <li>
+            🦈 <span>ピピ・レイ島でサメに会えるかチャレンジ</span>
+            <p class="mission-detail">少しスリルも！？</p>
+          </li>
+          <li>
+            🏝️ <span>マヤベイで「ザ・ビーチ」ごっこ</span>
+            <p class="mission-detail">映画の舞台で記念撮影！</p>
+          </li>
+          <li>
+            🛶 <span>カヤックで青いラグーンを探索</span>
+            <p class="mission-detail">秘境の水上ツアー！</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 旅のしおり占い -->
+    <section class="fortune">
+      <h2>🔮 旅のしおり占い</h2>
+      <p>クリックして今日の運勢を占おう！</p>
+      <button onclick="showFortune()">占う！</button>
+      <p id="fortune-result">🔍</p>
+    </section>
+
+    <footer>
+      <p>🎉 楽しい旅をもっと楽しくするために！</p>
+    </footer>
+  </body>
 </html>
