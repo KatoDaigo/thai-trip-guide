@@ -1,191 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9日目 - 日本到着！</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>✈️ 9日目 - 日本に到着！</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <!-- ▼ メインコンテンツ枠 ▼ -->
+    <div class="content-wrapper">
+      <!-- 日本到着アニメーション -->
+      <section class="japan-arrival">
+        <h2 id="arrival-text">✈️ 日本到着！お疲れ様でした！</h2>
+      </section>
 
-        <hr class="line-style-1">
+      <!-- メンバーごとの感想 -->
+      <section class="trip-memories">
+        <h2>📝 旅の感想を書こう！（5人分）</h2>
+        <p>ページを閉じても保存されるよ！</p>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+        <div class="member-feedback">
+          <label for="feedback1">🎤 大吾の感想</label>
+          <textarea
+            id="feedback1"
+            placeholder="楽しかったことを書こう！"
+          ></textarea>
         </div>
-        <p class="p-last">©TOTALLY</p>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+        <div class="member-feedback">
+          <label for="feedback2">🎤 晃英の感想</label>
+          <textarea id="feedback2" placeholder="最高の思い出を！"></textarea>
+        </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+        <div class="member-feedback">
+          <label for="feedback3">🎤 翔理の感想</label>
+          <textarea
+            id="feedback3"
+            placeholder="また行きたいところは？"
+          ></textarea>
+        </div>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+        <div class="member-feedback">
+          <label for="feedback4">🎤 啓斗の感想</label>
+          <textarea id="feedback4" placeholder="次の旅行の目標は？"></textarea>
+        </div>
+
+        <div class="member-feedback">
+          <label for="feedback5">🎤 勇成の感想</label>
+          <textarea
+            id="feedback5"
+            placeholder="旅のハイライトを書こう！"
+          ></textarea>
+        </div>
+
+        <button onclick="saveFeedback()">💾 感想を保存</button>
+        <p id="save-message"></p>
+      </section>
+    </div>
+
+    <footer>
+      <p>🌏 9日間の旅、お疲れ様でした！また行こう！</p>
+    </footer>
+  </body>
 </html>

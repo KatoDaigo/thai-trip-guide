@@ -166,3 +166,81 @@ header {
 .audio-btn:hover {
   background-color: #e68a00;
 }
+
+.hotel-checkin {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* 中央寄せ */
+}
+
+/* ホテル名と写真を縦に並べる */
+.hotel-container {
+  display: flex;
+  flex-direction: column; /* 縦方向に配置 */
+  align-items: center; /* 中央寄せ */
+  margin-top: 15px;
+}
+
+/* ホテル名画像 */
+.hotel-name-img {
+  width: 60%; /* お好みのサイズに調整 */
+  max-width: 400px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+/* ホテル外観写真 */
+.hotel-photo-img {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ▼ 午後の海＆展望台 */
+.afternoon-relax {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.afternoon-relax h2 {
+  color: #f0ad4e;
+}
+
+/* ▼ 夜のファイヤーショー */
+.fire-show {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.fire-show h2 {
+  color: #d9534f;
+}
+.fire-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.end-of-day {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.end-of-day h2 {
+  color: #d9534f;
+}

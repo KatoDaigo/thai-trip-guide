@@ -1,191 +1,189 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4日目 - のんびりOFF DAY & MBKへ</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🌞 4日目 - のんびりOFF DAY & MBKへ！</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <!-- メインコンテンツを白い枠で包む -->
+    <div class="content-wrapper">
+      <!-- 🏊 ホテルでのんびり -->
+      <section class="hotel-relax">
+        <h2>🏖️ のんびり過ごそう！</h2>
+        <p>
+          午前中はホテルでゆったり！プールで遊んだり、部屋でゴロゴロしよう！
+        </p>
+        <!-- 面白い機能：ランダムで「何しよう？」 -->
+        <button onclick="randomRelax()">🎲 何しよう？</button>
+        <p id="relax-result"></p>
+      </section>
 
-        <hr class="line-style-1">
+      <!-- 🚀 矢印で次の予定へ -->
+      <div class="arrow-next">
+        <p>⬇ 次の予定へ ⬇</p>
+      </div>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+      <!-- 🛍️ MBKセンター -->
+      <section class="mbk">
+        <h2>👜 偽物ブランドを探しにMBKへ！</h2>
+        <p>
+          MBKセンターには偽物ブランドがいっぱい！さて、本物そっくりの商品を見つけられるか？
+        </p>
+
+        <!-- 画像をいい感じに並べる -->
+        <div class="mbk-gallery">
+          <img src="../img/four/mbk1.png" alt="MBKの店内" class="mbk-img" />
+          <img src="../img/four/mbk2.png" alt="MBKの看板" class="mbk-img" />
+          <img src="../img/four/mbk3.png" alt="偽物ブランド" class="mbk-img" />
         </div>
-        <p class="p-last">©TOTALLY</p>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+        <!-- 面白い機能：偽物ブランド診断 -->
+        <button onclick="fakeBrandCheck()">🎭 偽物ブランド診断</button>
+        <p id="fake-result"></p>
+      </section>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+      <!-- 🚀 矢印で次の予定へ -->
+      <div class="arrow-next">
+        <p>⬇ 空港へ移動 ⬇</p>
+      </div>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+      <!-- ✈️ 空港へ移動 & プーケット行き -->
+      <section class="airport">
+        <h2>🚕 18:00 空港へ移動！</h2>
+        <p>プーケット行きの飛行機に遅刻しないようにしよう！</p>
+        <img
+          src="../img/four/plane.jpg"
+          alt="飛行機の情報"
+          class="schedule-img"
+        />
+        <p><strong>⚠️ 遅刻厳禁！時間を守ろう！</strong></p>
+      </section>
+
+      <!-- 🚀 矢印：プーケット到着後 -->
+      <div class="arrow-next">
+        <p>⬇ 22:00 プーケット到着 ⬇</p>
+      </div>
+
+      <!-- 🌙 プーケット到着 → パトンビーチへ移動 -->
+      <section class="phuket-arrival">
+        <h2>🛬 22:00 プーケット空港着 → パトンビーチへ！</h2>
+        <p>夜遅いけどまだ大丈夫！どうやって行く？</p>
+
+        <div class="transport-options">
+          <button onclick="toggleTransport('taxi')">🚖 タクシー</button>
+          <div id="taxi" class="transport-detail">
+            <p><strong>料金:</strong> 800～1000バーツ</p>
+            <p><strong>所要時間:</strong> 約45分</p>
+            <p><strong>メリット:</strong> ドアtoドア＆荷物が多くても安心</p>
+            <p><strong>デメリット:</strong> 高い</p>
+          </div>
+
+          <button onclick="toggleTransport('minivan')">🚐 ミニバン</button>
+          <div id="minivan" class="transport-detail">
+            <p><strong>料金:</strong> 200～300バーツ</p>
+            <p><strong>所要時間:</strong> 1時間～1時間半</p>
+            <p><strong>メリット:</strong> 安い、空港で受付あり</p>
+            <p><strong>デメリット:</strong> 人が集まるまで発車しない</p>
+          </div>
+
+          <button onclick="toggleTransport('bus')">🚌 空港バス</button>
+          <div id="bus" class="transport-detail">
+            <p><strong>料金:</strong> 100バーツ前後</p>
+            <p><strong>所要時間:</strong> 1時間30分以上</p>
+            <p><strong>メリット:</strong> 一番安い</p>
+            <p>
+              <strong>デメリット:</strong>
+              夜22時だと最終便に間に合わない可能性大
+            </p>
+          </div>
+
+          <button onclick="toggleTransport('grab')">📱 Grab</button>
+          <div id="grab" class="transport-detail">
+            <p><strong>料金:</strong> 700～900バーツ</p>
+            <p><strong>所要時間:</strong> 約45分</p>
+            <p><strong>メリット:</strong> タクシーより多少安い</p>
+            <p><strong>デメリット:</strong> 深夜料金UPの可能性</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 矢印：ホテルにチェックイン -->
+      <div class="arrow-next">
+        <p>⬇ ホテルにチェックイン ⬇</p>
+      </div>
+
+      <!-- 🏨 ホテルチェックイン -->
+      <section class="phuket-hotel">
+        <h2>🏨 ホテルチェックイン</h2>
+        <p>一泊1人2000円！朝食付き！しかもすぐ下が超人気のナイトマーケット！</p>
+        <img
+          src="../img/four/hotel1.jpg"
+          alt="ホテルの名前"
+          class="hotel-img"
+        />
+        <img
+          src="../img/four/hotel2.jpg"
+          alt="ホテルの外観"
+          class="hotel-img"
+        />
+      </section>
+
+      <!-- 矢印：夜市へGO！ -->
+      <div class="arrow-next">
+        <p>⬇ 眠くないやつは行くぞ！夜市へ！！！ ⬇</p>
+      </div>
+
+      <!-- 🌃 パトンのナイトマーケット（動画） -->
+      <section class="night-market">
+        <h2>🌃 パトン・ナイトマーケット</h2>
+        <p>夜食を求めてフード天国！</p>
+        <video controls class="night-video">
+          <source src="../img/four/food.mp4" type="video/mp4" />
+          お使いのブラウザは video タグをサポートしていません。
+        </video>
+        <p>🦐 屋台グルメ、海鮮、生フルーツジュースなど盛りだくさん！</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>🏝️ パトンビーチで夜の街を楽しもう！</p>
+    </footer>
+
+    <!-- ▼ 4日目終了！ -->
+    <div class="arrow-next">
+      <p>⬇ 4日目終了!!! ⬇</p>
+    </div>
+
+    <section class="good-night-4th">
+      <h2>✨ 4日目もお疲れさま！いっぱい寝てね！😴</h2>
+    </section>
+  </body>
 </html>

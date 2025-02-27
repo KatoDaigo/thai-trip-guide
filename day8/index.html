@@ -1,191 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8日目 - リゾート満喫！</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🌅 8日目 - ラスト日！リゾートを満喫しよう</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <div class="content-wrapper">
+      <!-- 🌄 朝の行動 -->
+      <section class="morning-plan">
+        <h2>🍳 ホテルで朝食</h2>
+        <p>しっかり食べて、今日も1日思いっきり楽しもう！</p>
+      </section>
 
-        <hr class="line-style-1">
+      <div class="arrow-next">
+        <p>⬇ ビーチでSUP ⬇</p>
+      </div>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
-        </div>
-        <p class="p-last">©TOTALLY</p>
+      <!-- 🏖️ ビーチでSUP -->
+      <section class="beach-sup">
+        <h2>🏖️ ビーチでSUP体験</h2>
+        <p>
+          青い海でSUP（スタンドアップパドル）を楽しもう！<br />
+          波に揺られながらリゾート気分を満喫！
+        </p>
+      </section>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+      <div class="arrow-next">
+        <p>⬇ 帰りの高速船へ… ⬇</p>
+      </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+      <!-- 🚢 帰りの高速船 fery.jpg -->
+      <section class="ferry-back">
+        <h2>🚢 帰りの高速船で帰路に</h2>
+        <p>夕方に乗船予定の高速船<br />いよいよ旅も終わりに近づく…</p>
+        <img src="../img/eight/fery.jpg" alt="帰りの高速船" class="ferry-img" />
+        <button onclick="showSadness()">😢 旅の寂しさを感じる</button>
+        <p id="sad-result"></p>
+      </section>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+      <!-- ▼ 旅の最後はビーチでファイヤーショーを見たい！ -->
+      <div class="arrow-next">
+        <p>⬇ 最後の夜…ビーチでファイヤーショー ⬇</p>
+      </div>
+
+      <section class="final-fire-show">
+        <h2>🔥 プーケットのビーチでファイヤーショー！</h2>
+        <p>
+          南国の夜に繰り広げられる炎の演出…<br />
+          これを見なきゃ旅は終われない！？
+        </p>
+
+        <!-- 動画や画像を埋め込むならここ -->
+        <video controls class="fire-video">
+          <source src="../img/eight/fire.mp4" type="video/mp4" />
+          お使いのブラウザは video タグをサポートしていません。
+        </video>
+
+        <p>✨ 最高の思い出を胸に、旅を締めくくろう！</p>
+      </section>
+
+      <!-- ▼ 帰国のフライト -->
+      <div class="arrow-next">
+        <p>⬇ いよいよ日本へ帰国 ⬇</p>
+      </div>
+
+      <section class="flight-home">
+        <h2>✈️ 飛行機に乗って日本へ帰ろう</h2>
+        <p>ついに旅もおしまい…またタイに来られる日を楽しみに！</p>
+        <img
+          src="../img/eight/plane.jpg"
+          alt="帰国の飛行機"
+          class="flight-img"
+        />
+        <p><strong>🛫 ありがとう、タイ！</strong></p>
+      </section>
+    </div>
+
+    <footer>
+      <p>🏝️ 8日目も最高の思い出を作ろう！</p>
+    </footer>
+  </body>
 </html>

@@ -1,191 +1,202 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3日目 - メークローン市場 & 水上マーケット</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🌅 3日目 - メークローン市場 & 水上マーケット</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <div class="content-wrapper">
+      <!-- 朝のスケジュール -->
+      <section class="morning">
+        <h2>🍽️ 朝食バイキング & 出発準備</h2>
+        <p>⏰ 8:00 起床 → ホテルの朝食バイキング</p>
+        <p>🚕 8:30 ホテル出発！</p>
+      </section>
 
-        <hr class="line-style-1">
+      <!-- 交通手段選択 -->
+      <section class="transport">
+        <h2>🚆 メークローン市場への行き方</h2>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+        <!-- ロットゥ（乗り合いバン） -->
+        <button onclick="toggleDetails('van-details')">
+          🚐 ロットゥ（乗り合いバン）
+        </button>
+        <div id="van-details" class="details">
+          <p>💰 料金：100バーツ</p>
+          <p>⏳ 所要時間：約1時間30分</p>
+          <p>📍 出発地：南バスターミナル</p>
+          <p>🚐 メリット：早く着く、途中で降りられる</p>
+          <p>⚠ デメリット：座席が狭く、荷物が多いと大変</p>
         </div>
-        <p class="p-last">©TOTALLY</p>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+        <!-- バス -->
+        <button onclick="toggleDetails('bus-details')">🚌 バス</button>
+        <div id="bus-details" class="details">
+          <p>💰 料金：50〜70バーツ</p>
+          <p>⏳ 所要時間：約2時間</p>
+          <p>📍 出発地：南バスターミナル</p>
+          <p>🚌 メリット：安い、大きな荷物もOK</p>
+          <p>⚠ デメリット：渋滞の影響を受ける、遅い</p>
+        </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+        <!-- 電車 -->
+        <button onclick="toggleDetails('train-details')">🚂 電車</button>
+        <div id="train-details" class="details">
+          <p>💰 料金：20バーツ</p>
+          <p>⏳ 所要時間：約3時間</p>
+          <p>📍 出発地：ウォンウィエンヤイ駅</p>
+          <p>🚂 メリット：のどかな風景を楽しめる</p>
+          <p>⚠ デメリット：本数が少ない、時間がかかる</p>
+        </div>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+        <!-- Grab -->
+        <button onclick="toggleDetails('grab-details')">
+          🚖 Grab（タクシーアプリ）
+        </button>
+        <div id="grab-details" class="details">
+          <p>💰 料金：約600バーツ</p>
+          <p>⏳ 所要時間：約1時間</p>
+          <p>📍 どこからでも乗れる</p>
+          <p>🚖 メリット：楽チン、ドアツードア</p>
+          <p>⚠ デメリット：高い、渋滞にハマる</p>
+        </div>
+      </section>
+
+      <!-- メークローン市場 -->
+      <section class="market">
+        <h2>🏬 メークローン市場</h2>
+        <img
+          src="../img/third/make.png"
+          alt="メークローン市場"
+          class="schedule-img"
+        />
+        <p>🚂 **電車が市場を通過する瞬間を見よう！**</p>
+        <p>⏰ 11:10頃 電車通過予定！</p>
+      </section>
+
+      <!-- ダムヌンサドゥアック水上マーケット -->
+      <section class="floating-market">
+        <h2>🛶 ダムヌンサドゥアック水上マーケット</h2>
+        <img
+          src="../img/third/river.png"
+          alt="ダムヌンサドゥアック水上マーケット"
+          class="schedule-img"
+        />
+        <p>🌊 **ボートに乗って本場の水上マーケットを体験！**</p>
+        <p>⏰ 12:30頃 ボートツアー開始</p>
+      </section>
+
+      <!-- 🔽 バンコクに戻る遷移セクション -->
+      <div class="next-step" id="nextStep">
+        🚆 バンコクへ戻る！ → 次はタイ古式マッサージ 💆‍♂️
+        <div class="arrow-bounce">⬇️</div>
+      </div>
+
+      <!-- ▼ タイ古式マッサージ セクション ▼ -->
+      <section class="massage-section">
+        <h2>💆‍♂️ 疲れた体を癒やそう！タイ古式マッサージ体験</h2>
+        <p>
+          メークローン市場 &
+          水上マーケットの後は、伝統のタイ古式マッサージでリフレッシュ！
+        </p>
+        <img
+          src="../img/third/thai.png"
+          alt="タイ古式マッサージ"
+          class="massage-img"
+        />
+        <p>🕰️ 60分～90分コースがおすすめ！</p>
+        <p>💰 **料金相場：200～500バーツ**（場所による）</p>
+        <p>
+          💡 **ポイント：**
+          本場のタイ古式マッサージは痛気持ちいい！旅の疲れをしっかりとろう！
+        </p>
+        <div class="massage-arrow">⬇️</div>
+      </section>
+      <!-- ▲ タイ古式マッサージ セクションここまで ▲ -->
+
+      <!-- 🔽 バンコクからアジアティークへ移動 -->
+      <div class="next-stop" id="nextStop">
+        🚤 チャオプラヤー川を渡って → アジアティーク・リバーサイドへ！
+        <div class="arrow-bounce">⬇️</div>
+      </div>
+
+      <!-- 🔽 アジアティーク・リバーサイド セクション -->
+      <section class="asiatique-section">
+        <h2>🌃 アジアティーク・リバーサイドへようこそ！</h2>
+        <p>バンコク最大のナイトマーケット！ショッピングもグルメも楽しもう！</p>
+        <img
+          src="../img/third/ajia.png"
+          alt="アジアティークの夜景"
+          class="schedule-img"
+        />
+
+        <!-- 魅力紹介 -->
+        <div class="attractions">
+          <div class="attraction-box">
+            <h3>🛍 ショッピング</h3>
+            <p>おしゃれな雑貨やタイのお土産が揃う！</p>
+          </div>
+          <div class="attraction-box">
+            <h3>🍽 レストラン</h3>
+            <p>川沿いの雰囲気抜群なレストランで贅沢ディナー！</p>
+          </div>
+          <div class="attraction-box">
+            <h3>🎡 たくさんの屋台</h3>
+            <p>たくさんの民族フード</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔽 みんなで決めよう！セクション -->
+      <section class="decision-section">
+        <h2>🤔 みんなで決めよう！この後どうする？</h2>
+        <p>アジアティークを楽しんだ後、次はどうする？</p>
+
+        <div class="choices">
+          <button class="choice-btn" onclick="showChoice('bar')">
+            🍻 バーで乾杯！
+          </button>
+          <button class="choice-btn" onclick="showChoice('nightMarket')">
+            🏮 夜市でグルメ！
+          </button>
+          <button class="choice-btn" onclick="showChoice('hotel')">
+            🏨 ホテルでまったり！
+          </button>
+        </div>
+
+        <div id="choiceResult" class="choice-result"></div>
+      </section>
+    </div>
+
+    <footer>
+      <p>🚆 メークローン市場 & 水上マーケットで最高の体験を！</p>
+    </footer>
+  </body>
 </html>

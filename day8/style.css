@@ -1,193 +1,251 @@
-/**{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}*/
+/* ======================================
+   8日目 全体スタイル
+   背景画像: home.png
+====================================== */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  /* 8日目用の背景 */
+  background: url("../img/eight/home.png") no-repeat center center fixed;
+  background-size: cover;
 
-h1{
-    margin-top:40px;
-    text-align:center;
-    font-weight:bold;
-    font-size: 24px;
+  margin: 0;
+  padding: 20px;
 }
 
-.line-up {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 60px;
+/* ======================================
+   ハンバーガーメニューのボタン
+====================================== */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* メニューより上に */
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.menu-icon:hover {
+  background: rgba(0, 0, 0, 1);
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    gap:15px;
+/* ======================================
+   サイドメニュー (ハンバーガー中身)
+====================================== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* 初期は左に隠しておく */
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  padding-top: 50px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side-menu ul li {
+  text-align: center;
+  padding: 15px;
+}
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+}
+.side-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 
-.left{
-   /* display:flex;*/
-    flex: 3;
-    margin-left:100px;
-    max-width:650px;
+/* ======================================
+   ヘッダー
+====================================== */
+header {
+  background: rgba(255, 165, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+header h1 {
+  margin: 0;
 }
 
-.right{
-    /*display:flex;*/
-    justify-content:flex-end;   
-    flex:1;
-    margin-right:60px;
+/* ======================================
+   メインコンテンツの白い枠
+====================================== */
+.content-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* ページ幅の最大値 */
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-a{
-    font-size:12px;
-    text-decoration:none;
-    color:black;
+/* ======================================
+   矢印で次の予定へ
+====================================== */
+.arrow-next {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: red;
 }
 
-a:hover{
-    color:blue;
+/* ======================================
+   朝の行動 (ホテル朝食)
+====================================== */
+.morning-plan {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.morning-plan h2 {
+  color: #d9534f;
 }
 
-.line-style-1 {
-    border: none;
-    border-top: 2px solid #ccc; 
-    margin:0px 100px;
-    margin-bottom:50px;
+/* ======================================
+   ビーチでSUP
+====================================== */
+.beach-sup {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.beach-sup h2 {
+  color: #5bc0de;
 }
 
-.main{
-    display:flex;
-    gap:80px;
+/* ======================================
+   帰りの高速船
+====================================== */
+.ferry-back {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.ferry-back h2 {
+  color: #f0ad4e;
+}
+.ferry-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.image{
-    flex:1;
-    margin-left:180px;
+/* ======================================
+   寂しさを感じるボタン と 結果表示
+====================================== */
+#sad-result {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f;
 }
 
-.text{
-    flex:1;
-    margin-right:200px;
+/* ======================================
+   画像のスタイル (共通)
+====================================== */
+.schedule-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.line-style-2{
-    border:none;
-    border-top: 2px solid #ccc; 
+/* ======================================
+   ボタン (面白機能など)
+====================================== */
+button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #e65c00;
 }
 
-.line-style-3{
-    border:none;
-    border-top: 2px solid #ccc; 
-    margin:14px 0px; 
+/* ======================================
+   フッター
+====================================== */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
 }
 
-h2{
-    font-size: 19px;
+.final-fire-show {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.p-1{
-    font-size:13px;
+.final-fire-show h2 {
+  color: #ff9933;
+  margin-bottom: 10px;
 }
 
-.p-2{
-    margin: 27px 0px;
-    font-size:11px;
+.fire-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-table{
-    width:100%; 
-    border-collapse:collapse;
-    font-size:14px;
-    color:#444;
+.flight-home {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.color,.size{
-    width:20%;
+.flight-home h2 {
+  color: #f0ad4e;
 }
 
-.quantity{
-    width:60%;
+.flight-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-th{
-    padding:6px 10px;
-    font-weight:normal;
-    text-align: center;
-}
-
-td{
-    padding:6px 10px;
-    text-align:center;
-}
-
-select{
-    width:100%;
-}
-
-.order-table th,.order-table td{
-    border-right:1px solid #c3c3c3;
-}
-
-.order-table th:last-child,.order-table td:last-child{
-    border-right:none;
-}
-
-.order-table tr,.order-table th{
-    border-bottom:1px solid #c3c3c3;
-}
-
-.order-table tr:last-child{
-    border-bottom:none;
-}
-
-.button{
-    background-color: #444;
-    color:white;
-    text-align:center;
-    padding:14px 141px;
-}
-
-a:hover{
-    color:#f7eb0c;
-}
-
-.margin{
-    margin:44px 0px;
-}
-
-.order-table2{
-    border-collapse:collapse;
-   /* border:1px solid #c3c3c3;*/
-    margin-bottom: 180px;
-}
-
-.table2 th,.table2 td{
-    border:1px solid #b2b0b0;
-
-}
-
-.table2 th{
-    background-color:#ede7e7 ;
-}
-
-.table2 td:first-child{
-    background-color:#ede7e7 ;
-}
-
-.p-last{
-    text-align:center;
-    font-size:14px;
-}
-
-
-
-
-
-
-
-
-
-
-  
-
-

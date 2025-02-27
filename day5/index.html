@@ -1,191 +1,189 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5日目 - 大冒険 & 買い物ざんまい</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🌅 5日目 - 朝食→ツアー交渉→ジョンセイロン→バギー</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <!-- メインコンテンツの白枠 -->
+    <div class="content-wrapper">
+      <!-- 🍳 朝食 -->
+      <section class="morning-meal">
+        <h2>🍳 ホテルで朝食</h2>
+        <p>今日も元気にスタート！朝ごはんはしっかり食べよう。</p>
+      </section>
 
-        <hr class="line-style-1">
+      <div class="arrow-next">
+        <p>⬇ ツアー販売店へ！値切り交渉 ⬇</p>
+      </div>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
-        </div>
-        <p class="p-last">©TOTALLY</p>
+      <!-- 🏷️ ツアー交渉 -->
+      <section class="tour-shop">
+        <h2>🛍️ 現地ツアー販売店でツアーを決めよう！</h2>
+        <p>みんなで値切り交渉しまくる！！ここぞとばかりに攻めよう！</p>
+      </section>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+      <div class="arrow-next">
+        <p>⬇ ジョンセイロンへ ⬇</p>
+      </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+      <!-- 🏬 ジョンセイロン -->
+      <section class="jungceylon">
+        <h2>🛍️ ジョンセイロンで買い物</h2>
+        <p>お土産から服、雑貨まで何でも揃うショッピングモール</p>
+        <img
+          src="../img/five/shop.png"
+          alt="ジョンセイロン"
+          class="activity-img"
+        />
+        <p>買い物を楽しんだら、次のアクティビティへ！</p>
+      </section>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+      <div class="arrow-next">
+        <p>⬇ バギー体験 ⬇</p>
+      </div>
+
+      <!-- 🏎️ バギー -->
+      <section class="jungle-buggy">
+        <h2>🏎️ 熱帯雨林をバギーで駆け抜ける！</h2>
+        <p>スリル満点の大冒険！汚れてもいい服装でGO！</p>
+        <img src="../img/five/bagi.png" alt="バギー体験" class="activity-img" />
+      </section>
+
+      <!-- ▼ ここから追加分 (タイガーキングダム → ホテル荷物 → スーパーチープ) -->
+
+      <div class="arrow-next">
+        <p>⬇ タイガーキングダムへ ⬇</p>
+      </div>
+
+      <!-- タイガーキングダム -->
+      <section class="tiger-kingdom">
+        <h2>🐯 タイガーキングダム</h2>
+        <p>
+          大迫力のトラと記念撮影！？かなり近距離で触れ合えるレア体験<br />
+          時間ないし、高いから諦めるかも
+        </p>
+        <img
+          src="../img/five/tiger.png"
+          alt="タイガーキングダム"
+          class="activity-img"
+        />
+      </section>
+
+      <div class="arrow-next">
+        <p>⬇ 一度ホテルに戻って荷物をピックアップ ⬇</p>
+      </div>
+
+      <!-- ホテルに戻り荷物を受け取る -->
+      <section class="hotel-pickup">
+        <h2>🏨 ホテルで荷物を回収</h2>
+        <p>荷物をまとめて、次の目的地へ移動準備！</p>
+      </section>
+
+      <div class="arrow-next">
+        <p>⬇ スーパーチープで爆買い ⬇</p>
+      </div>
+
+      <!-- スーパーチープ -->
+      <section class="super-cheap">
+        <h2>🛒 スーパーチープで爆買い</h2>
+        <p>
+          地元民に愛されるショッピング施設。ピピ島に向けて必需品を大量ゲット！
+        </p>
+        <p>お菓子や飲み物、生活雑貨まで…欲しいものを全部買っちゃおう！</p>
+      </section>
+
+      <!-- ▼ 次の移動：5つ星ホテルへ -->
+      <div class="arrow-next">
+        <p>⬇ 5つ星ホテルへ移動 ⬇</p>
+      </div>
+
+      <section class="hotel-luxury">
+        <h2>🌟 5つ星ホテルにチェックイン</h2>
+        <p>美味しいご飯、最高のプール、豪華なお部屋…すべてが一級品！</p>
+
+        <!-- ホテル名が hotel1.png, ホテル外観が hotel2.png -->
+        <img
+          src="../img/five/hotel1.png"
+          alt="ホテル名"
+          class="hotel-name-img"
+        />
+        <img
+          src="../img/five/hotel2.png"
+          alt="ホテル外観"
+          class="hotel-photo-img"
+        />
+
+        <p>贅沢気分を思う存分味わおう！</p>
+      </section>
+
+      <!-- ▼ 夜はプーケットオールドタウンへ -->
+      <div class="arrow-next">
+        <p>⬇ 夜はプーケットオールドタウンへ！！！ ⬇</p>
+      </div>
+
+      <section class="phuket-oldtown">
+        <h2>🏛️ プーケット・オールドタウンを散策</h2>
+        <p>
+          カラフルな建物が立ち並ぶ通り、実は<strong>シノ・ポルトガル様式</strong>という<br />
+          19世紀に中国とヨーロッパの建築が融合したスタイルなのです！
+        </p>
+        <p>
+          錫鉱山で栄えた当時、多くの中国人移民が来て<br />
+          ヨーロッパの影響も受けながら独特の美しい町並みが誕生。<br />
+          だからこそ、アジアと欧州の文化がミックスされた建物が多いんだとか！
+        </p>
+        <img
+          src="../img/five/old.png"
+          alt="プーケットオールドタウン"
+          class="activity-img"
+        />
+        <p>
+          夜はライトアップされ、さらにフォトジェニック！<br />
+          歴史ある街並みを散策しつつ、屋台グルメやカフェ巡りを楽しもう！
+        </p>
+      </section>
+
+      <div class="arrow-next">
+        <p>⬇ 5日目終了！ ⬇</p>
+      </div>
+
+      <section class="end-of-day5">
+        <h2>🌙 5日目もお疲れ様！</h2>
+        <p>充実の1日を満喫したね！明日に備えてゆっくり休もう。</p>
+      </section>
+    </div>
+
+    <footer>
+      <p>🌴 5日目は盛りだくさんのスケジュール！</p>
+    </footer>
+  </body>
 </html>

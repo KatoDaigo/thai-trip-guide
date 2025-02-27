@@ -1,191 +1,186 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7日目 - ツアーに参加！</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🌅 7日目 - 朝食を食べてすぐツアーへ！</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
+    <!-- メインコンテンツを白い枠で包む -->
+    <div class="content-wrapper">
+      <!-- 🍳 朝食 -->
+      <section class="morning-meal">
+        <h2>🥐 朝食バイキング</h2>
+        <p>早起きしてホテルの朝食を堪能！エネルギーをチャージしよう！</p>
+      </section>
 
-        <hr class="line-style-1">
+      <!-- 🚀 矢印で次の予定へ -->
+      <div class="arrow-next">
+        <p>⬇ 次の予定へ ⬇</p>
+      </div>
 
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+      <!-- 🚌 ツアーに出発 -->
+      <section class="tour-info">
+        <h2>🚌 ツアーに参加しよう！</h2>
+        <p>
+          朝食後、すぐにツアーの集合場所へ移動。ここから1日アクティビティ満載！
+        </p>
+
+        <!-- tour1.jpg (ツアーの名前) -->
+        <img src="../img/seven/tour1.jpg" alt="ツアー名" class="tour-img" />
+        <!-- tour2.jpg (ツアーの内容) -->
+        <img src="../img/seven/tour2.jpg" alt="ツアー内容" class="tour-img" />
+
+        <p>
+          観光バスに乗ったらあっという間に目的地！<br />
+          最高の景色とアクティビティを満喫しよう！
+        </p>
+      </section>
+
+      <!-- ▼ ツアー詳細（時系列） -->
+      <div class="arrow-next">
+        <p>⬇ ツアーの具体的スケジュールをチェック！ ⬇</p>
+      </div>
+
+      <section class="tour-schedule">
+        <h2>🗓️ ツアー スケジュール（アコーディオン）</h2>
+        <p>見たい時間帯をクリック！</p>
+
+        <div class="accordion">
+          <!-- 09:30am -->
+          <button class="accordion-btn" onclick="togglePanel('time0930')">
+            09:30am 出発
+          </button>
+          <div id="time0930" class="accordion-panel">
+            <p>トンサイ桟橋からロングテールボートで出発！</p>
+          </div>
+
+          <!-- 10:00am -->
+          <button class="accordion-btn" onclick="togglePanel('time1000')">
+            10:00am モンキービーチ
+          </button>
+          <div id="time1000" class="accordion-panel">
+            <p>白い砂浜で野生の猿を観察。写真撮影のチャンス！</p>
+          </div>
+
+          <!-- 10:30am -->
+          <button class="accordion-btn" onclick="togglePanel('time1030')">
+            10:30am バンブーアイランド
+          </button>
+          <div id="time1030" class="accordion-panel">
+            <p>
+              透明度の高い海でシュノーケリング・スイミングを満喫。<br />
+              白い砂浜でのんびり日光浴や散歩もOK！ここで2時間休憩。
+            </p>
+          </div>
+
+          <!-- 12:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time1230')">
+            12:30pm ランチタイム
+          </button>
+          <div id="time1230" class="accordion-panel">
+            <p>船上でお弁当、果物、飲料水を提供。海を見ながら優雅にランチ！</p>
+          </div>
+
+          <!-- 01:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time0130')">
+            01:30pm ピピ・レー島
+          </button>
+          <div id="time0130" class="accordion-panel">
+            <p>
+              有名なツバメの巣の採集場所を探索。<br />
+              ケーブ（洞窟）や絶景ポイントを観光！
+            </p>
+          </div>
+
+          <!-- 03:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time0330')">
+            03:30pm マヤ・ベイ
+          </button>
+          <div id="time0330" class="accordion-panel">
+            <p>
+              映画「ザ・ビーチ」のロケ地！<br />
+              シュノーケリングや海水浴、リラックス＆写真撮影を楽しもう！
+            </p>
+          </div>
+
+          <!-- 04:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time0430')">
+            04:30pm シャークポイント
+          </button>
+          <div id="time0430" class="accordion-panel">
+            <p>
+              ブラックチップリーフシャークが見られるかも？<br />
+              小魚を狙う姿は迫力満点！
+            </p>
+          </div>
+
+          <!-- 05:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time0530')">
+            05:30pm ロングテールボートでクルージング
+          </button>
+          <div id="time0530" class="accordion-panel">
+            <p>
+              船内で軽食・フルーツ・飲料水を楽しみつつ、アンダマン海をクルージング！
+            </p>
+          </div>
+
+          <!-- 06:30-07:30pm -->
+          <button class="accordion-btn" onclick="togglePanel('time0630')">
+            06:30pm - 07:30pm 夕日＆プランクトン
+          </button>
+          <div id="time0630" class="accordion-panel">
+            <p>
+              美しい夕日を鑑賞した後は、プランクトンと泳ぐ神秘体験！<br />
+              その後、桟橋に戻ってツアー終了。
+            </p>
+          </div>
         </div>
-        <p class="p-last">©TOTALLY</p>
+      </section>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+      <!-- ▼ この日の午後・夜は未定！ -->
+      <div class="arrow-next">
+        <p>⬇ その後は未定！！ ⬇</p>
+      </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+      <section class="after-tour-undefined">
+        <h2>🤔 この後はまだ決まっていない…</h2>
+        <p>
+          何をするかはみんなで相談して決めよう！<br />
+          自由に楽しんで、最高の一日にしよう！
+        </p>
+      </section>
+    </div>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+    <footer>
+      <p>🏝️ 7日目はツアーで大冒険！</p>
+    </footer>
+  </body>
 </html>
