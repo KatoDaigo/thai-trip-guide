@@ -1,191 +1,269 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2日目 - バンコクへ移動 & ホテル紹介 & 3大寺院</title>
+    <!-- CSSとJSの読み込み -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- ▼ ハンバーガーメニュー ▼ -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav class="side-menu">
+      <ul>
+        <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
+        <li><a href="../day1/index.html">📅 1日目</a></li>
+        <li><a href="../day2/index.html">📅 2日目</a></li>
+        <li><a href="../day3/index.html">📅 3日目</a></li>
+        <li><a href="../day4/index.html">📅 4日目</a></li>
+        <li><a href="../day5/index.html">📅 5日目</a></li>
+        <li><a href="../day6/index.html">📅 6日目</a></li>
+        <li><a href="../day7/index.html">📅 7日目</a></li>
+        <li><a href="../day8/index.html">📅 8日目</a></li>
+        <li><a href="../day9/index.html">📅 9日目</a></li>
+      </ul>
+    </nav>
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-       <title>TOTALLY</title>
-       <link rel="stylesheet" href="style.css";>
-    </head>
+    <header>
+      <h1>🚶 2日目 - バンコクへ移動！</h1>
+    </header>
 
-    <body>
-        <header>
-            <h1>TOTALLY</h1>
-                <div class="line-up">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#ALL">ALL</a></li>
-                            <li><a href="#NEW">new</a></li>
-                            <li><a href="#VINTAGE">VINTAGE</a></li>
-                            <li><a href="#CATEGORY">CATEGORY</a></li>
-                            <li><a href="#LOOKBOOK">LOOKBOOK</a></li>
-                            <li><a href="#BLOG">BLOG</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="right">
-                        <ul>
-                            <li><a href="#LOGIN">LOGIN</a></li>
-                            <li><a href="#CONTACT">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </header>
-
-        <hr class="line-style-1">
-
-        <div class="main">
-            <div class="image">
-                <img src="image_720.png" alt="main-visual-image" style="width:100%;">
-            </div>
-            <div class="text">
-                <hr class="line-style-2">
-                <h2 id="product-name" >TOTALLY Short Sleeve Shirt</h2>
-                <hr class="line-style-3">
-                <p class="p-1">テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキスト
-                </p>
-                <p class="p-2">
-                    ￥9,999+tax
-                </p>
-                <table class="order-table">
-                    <thead>
-                        <tr>
-                            <th class="color">Color</th>
-                            <th class="size">Size</th>
-                            <th class="quantity"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>White</td>
-                            <td>S</td>
-                            <td>
-                                <select name="quantity-s">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">M</td>
-                            <td>
-                                <select name="quantity-M">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td class="vacant">L</td>
-                            <td>
-                                <select name="quantity-L">
-                                    <option value="" selected disabled hidden></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="margin">
-                    <a href="#" class="button">ADD TO CART</a>
-                </div>
-                <div class="order-table2">
-                    <table class="table2">
-                        <thead>
-                            <tr>
-                                <th>Size</th>
-                                <th>Chest</th>
-                                <th>Weist</th>
-                                <th>Height</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>S</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>M</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                            <tr>
-                                <td>L</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                                <td>99～99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+    <div class="content-wrapper">
+      <!-- ▼ 移動手段：バンコク市内へ ▼ -->
+      <section class="intro">
+        <h2>バンコク市内への移動手段</h2>
+        <p>まずは空港からホテルへ向かおう！好きな方法をクリックして確認</p>
+      </section>
+      <div class="accordion">
+        <button class="accordion-btn">🚖 タクシー</button>
+        <div class="panel">
+          <p><strong>所要時間:</strong> 30〜45分（渋滞なし）</p>
+          <p><strong>料金:</strong> 250〜400バーツ＋高速料金50バーツ</p>
+          <p><strong>メリット:</strong> ホテルまで直行、荷物が多くてもOK</p>
+          <p>
+            <strong>デメリット:</strong> 渋滞にハマると1時間以上、ぼったくり注意
+          </p>
         </div>
-        <p class="p-last">©TOTALLY</p>
 
-        <script>
-                        const url =
-                "http://localhost:3333/item/0";
+        <button class="accordion-btn">🚄 エアポートレールリンク (ARL)</button>
+        <div class="panel">
+          <p><strong>所要時間:</strong> 約30分（パヤータイ駅まで）</p>
+          <p><strong>料金:</strong> 片道45バーツ</p>
+          <p><strong>メリット:</strong> 渋滞なし、料金が安い</p>
+          <p>
+            <strong>デメリット:</strong>
+            荷物が多いと大変、駅からホテルまでの移動が必要
+          </p>
+        </div>
 
-            // 送信するデータオブジェクト
-           
-            // fetchを使ってPOSTリクエストを送信
-            fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json", // JSONデータを送信することを示す
-                },
-            })
-                .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTPエラー: ${response.status}`);
-                }
-                return response.json(); // JSON形式のレスポンスをオブジェクトに変換
-                })
-                .then((data) => {
-                // 取得したデータを保持
-                const responseData = data;
-                console.log("サーバーからの応答:", responseData);
-                // ここでresponseDataを使用して操作や表示が可能
-                document.getElementById('product-name').textContent = responseData.name;  
-                document.getElementsByClassName('p-1')[0].textContent = responseData.description;
+        <button class="accordion-btn">🚌 空港バス（S1など）</button>
+        <div class="panel">
+          <p><strong>所要時間:</strong> 45分〜1時間</p>
+          <p><strong>料金:</strong> 60バーツ</p>
+          <p><strong>メリット:</strong> 料金が安い、荷物OK</p>
+          <p>
+            <strong>デメリット:</strong>
+            バス停からホテルまで歩く必要あり、渋滞で遅れる可能性
+          </p>
+        </div>
 
-                var price_str=String(responseData.price);
-                let formatprice="";
-                for (let char=0;char<price_str.length;char++) {
-                if (char % 3 === 0 && char !== 0) {
-                    formated_price = "," + formated_price;
-                }
-                formated_price = price_str[price_str.length - char - 1] + formated_price;
-                }
-                document.getElementsByClassName('p-2')[0].textContent = '¥' + formated_price + '+tax';  
-                })
-                .catch((error) => {
-                console.error("エラーが発生しました:", error);
-                });
-        </script>
-    </body>
+        <button class="accordion-btn">📱 Grab（配車アプリ）</button>
+        <div class="panel">
+          <p><strong>所要時間:</strong> 30〜45分（渋滞なし）</p>
+          <p><strong>料金:</strong> 300〜500バーツ（距離による）</p>
+          <p><strong>メリット:</strong> 料金確定、ぼったくりなし、快適</p>
+          <p><strong>デメリット:</strong> タクシーより少し高め</p>
+        </div>
+      </div>
+
+      <!-- ▼ ホテル紹介 ▼ -->
+      <section class="hotel-info">
+        <h2>🌟 ホテルに荷物を置こう！（3/1～3/3滞在）</h2>
+        <!-- ホテル名の画像 -->
+        <img src="../img/second/hotel1.png" alt="ホテル名" class="hotel-logo" />
+        <!-- ホテルの画像 -->
+        <img
+          src="../img/second/hotel2.png"
+          alt="ホテル外観"
+          class="schedule-img"
+        />
+
+        <p class="hotel-desc">
+          4つ星の最高級ホテル！毎日朝食バイキング付きで、プール・ジムも完備。<br />
+          豪華なロビーと洗練された客室が魅力です。<br />
+          ここで旅の質が決まるといっても過言ではない…！
+        </p>
+      </section>
+
+      <!-- ▼ 3大寺院巡り ▼ -->
+      <section class="travel-flow">
+        <h2>📍 次の行動：5大寺院を巡ろう！</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="icon">🏨</div>
+            <div class="text">ホテルで荷物を置く</div>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="timeline-item">
+            <div class="icon">🚌</div>
+            <div class="text">タクシーでワット・プラケオへ</div>
+          </div>
+          <div class="arrow">⬇️</div>
+          <div class="timeline-item">
+            <div class="icon">⛩️</div>
+            <div class="text">5大寺院巡りスタート！</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="temple-section">
+        <h2>⛩️ 5大寺院を巡ろう！</h2>
+        <p>ホテルに荷物を置いたら、さっそく寺院巡りへ出発！</p>
+
+        <div class="accordion">
+          <button class="accordion-btn">
+            💎 ワット・プラケオ（Wat Phra Kaew）
+          </button>
+          <div class="accordion-content">
+            <p>✨ 入場料：500バーツ（約2000円）</p>
+            <p>📜 タイの王室寺院で、エメラルド仏がある！</p>
+            <p>⚠️ **短パン・ノースリーブ禁止！服装注意！**</p>
+          </div>
+
+          <button class="accordion-btn">🛏️ ワット・ポー（Wat Pho）</button>
+          <div class="accordion-content">
+            <p>✨ 入場料：200バーツ（約800円）</p>
+            <p>💆‍♂️ 本場のタイマッサージが受けられる！</p>
+            <p>⚠️ 靴を脱ぐエリアがあるので、**脱ぎやすい靴推奨！**</p>
+          </div>
+
+          <button class="accordion-btn">🏯 ワット・アルン（Wat Arun）</button>
+          <div class="accordion-content">
+            <p>✨ 入場料：100バーツ（約400円）</p>
+            <p>🌅 チャオプラヤー川沿いにあり、夕景が最高！</p>
+            <p>⚠️ 階段がめちゃくちゃ急なので、**スニーカー推奨！**</p>
+          </div>
+
+          <button class="accordion-btn">
+            🌟 ワット・パークナム・パーシー（Wat Paknam Phasi）
+          </button>
+          <div class="accordion-content">
+            <p>✨ 入場料：無料</p>
+            <p>🛕 天井の美しいエメラルドグリーンの仏塔が見どころ！</p>
+            <p>⚠️ 寺院内は静かに見学すること！</p>
+          </div>
+
+          <button class="accordion-btn">
+            💰 ワット・トライミット（Wat Traimit）
+          </button>
+          <div class="accordion-content">
+            <p>✨ 入場料：40バーツ（約160円）</p>
+            <p>🏆 世界最大の純金製の黄金仏がある！</p>
+            <p>⚠️ 黄金仏を写真に撮る時はフラッシュ禁止！</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="member-comment">
+        <img src="../img/koei/koei2.png" alt="光栄の写真" class="member-img" />
+        <div class="speech-bubble">
+          <p>「寺院巡りばっかじゃつまんない！おいしいもの食べようよ！」</p>
+        </div>
+      </section>
+
+      <section class="member-comment">
+        <img
+          src="../img/daigo/daigo3.png"
+          alt="ダイゴの写真"
+          class="member-img"
+        />
+        <div class="speech-bubble speech-orange">
+          <p>「ゴメンワン、初日の最初だけは歴史を学んで！」</p>
+        </div>
+      </section>
+
+      <!-- 🔽 5大寺院巡りが終わった後、次の日程へ！ -->
+      <section class="next-schedule">
+        <p>次の目的地へ！</p>
+        <div class="arrow">▼</div>
+      </section>
+
+      <!-- 🛍️ アイコンサイアムのセクション -->
+      <section id="iconsiam">
+        <h2>🛍️ アイコンサイアムでショッピング & ナイトビュー！</h2>
+        <p>バンコクの超豪華モール、アイコンサイアムへ！</p>
+        <img
+          src="../img/second/ikon.png"
+          alt="アイコンサイアム"
+          class="schedule-img"
+        />
+      </section>
+
+      <!-- 🌙 ナイトクルージング -->
+      <!-- 🔽 ナイトクルージングへの移動を矢印で区切る -->
+      <div class="arrow-divider">▼ 次の旅程：ナイトクルージング ▼</div>
+
+      <!-- 🌙 ナイトクルージング -->
+      <section id="night-cruise">
+        <h2>🌙 チャオプラヤー川 ナイトクルージング！</h2>
+        <p>バンコクの夜景を楽しむ優雅なクルーズへ！</p>
+
+        <!-- 🎥 手動再生のクルージング動画 -->
+        <video id="cruise-video" class="cruise-video" controls>
+          <source src="../img/second/night.mp4" type="video/mp4" />
+          お使いのブラウザは動画タグをサポートしていません。
+        </video>
+      </section>
+
+      <!-- 🔽 ナイトマーケットへの移動を矢印で区切る -->
+      <div class="arrow-divider">
+        ▼ 次の旅程：カオサン通り ナイトマーケット ▼
+      </div>
+
+      <!-- 🎉 カオサン通り ナイトマーケット -->
+      <section id="khaosan-night">
+        <h2>🌃 カオサン通り ナイトマーケット！</h2>
+        <p>バックパッカーの聖地、カオサン通りで夜遊び！</p>
+
+        <!-- 🛍️ ナイトマーケットの画像 -->
+        <img
+          src="../img/second/khaosan.jpg"
+          alt="カオサン通り"
+          class="market-img"
+        />
+
+        <h3>🌶️ 罰ゲーム！虫料理に挑戦！？</h3>
+        <p>みんなでチャレンジ！ルーレットで食べる虫を決めよう！🦗🔥</p>
+
+        <!-- 🎰 ルーレットボタン -->
+        <button onclick="spinRoulette()">🎲 ルーレットを回す！</button>
+
+        <!-- 🎯 ルーレット結果表示 -->
+        <p id="roulette-result">👉 何が出るかな？</p>
+      </section>
+
+      <!-- 🔽 ホテルへ戻る矢印で区切る -->
+      <div class="arrow-divider">▼ 次の旅程：ホテルに戻って就寝 ▼</div>
+
+      <!-- 🏨 ホテルに戻る -->
+      <section id="hotel-return">
+        <h2>🏨 ホテルに戻って就寝</h2>
+        <p>
+          たくさん遊んだ1日目！明日も朝から全力で楽しむためにしっかり休もう！
+        </p>
+
+        <!-- 🌙 おやすみアニメーション -->
+        <div class="good-night">🌙 **おやすみ…Zzz**</div>
+      </section>
+    </div>
+
+    <footer>
+      <p>🚀 バンコクを思い切り楽しもう！</p>
+    </footer>
+  </body>
 </html>

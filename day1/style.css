@@ -1,4 +1,4 @@
-/* ======== もとのスタイルは全部そのまま ======== */
+/* 全体のスタイル */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -7,6 +7,7 @@ body {
   padding: 20px;
 }
 
+/* ヘッダー */
 header {
   background-color: #ffcc00;
   padding: 20px;
@@ -17,8 +18,9 @@ h1 {
   color: #ff6600;
 }
 
-.rules,
-.items {
+/* スケジュール情報 */
+.schedule,
+.flight {
   background: white;
   padding: 20px;
   margin: 20px auto;
@@ -31,105 +33,15 @@ h2 {
   color: #d9534f;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.3);
-  cursor: pointer;
-}
-
-footer {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* ======== メンバー写真の配置 ======== */
-.floating-member {
-  position: absolute;
-  width: 100px;
-  height: auto;
+/* 画像 */
+.schedule-img {
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
 }
 
-/* メンバーの位置 */
-.member1 {
-  top: 250px;
-  left: 30px;
-}
-
-.member2 {
-  bottom: 120px;
-  right: 50px;
-}
-
-/* 吹き出し */
-.speech-bubble {
-  position: absolute;
-  background: #fff;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 160px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-}
-
-/* 吹き出しの三角形 */
-.speech-bubble::after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-  display: block;
-}
-
-/* メンバー1の吹き出し（左側） */
-.speech1 {
-  top: 260px;
-  left: 140px;
-}
-
-.speech1::after {
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* メンバー2の吹き出し（右側） */
-.speech2 {
-  bottom: 130px;
-  right: 180px;
-}
-
-.speech2::after {
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-  right: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* ======== ▼ ハンバーガーメニューの追加 ▼ ======== */
+/* ハンバーガーメニュー */
 .menu-icon {
   position: fixed;
   top: 20px;
@@ -168,13 +80,12 @@ footer {
 }
 
 .side-menu ul li {
-  background: transparent;
-  padding: 15px;
   text-align: center;
+  padding: 15px;
 }
 
 .side-menu ul li a {
-  color: white; /* リンク文字を白に */
+  color: white;
   text-decoration: none;
   font-size: 18px;
   display: block;
@@ -184,4 +95,191 @@ footer {
 .side-menu ul li a:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
+}
+
+/* メンバー写真の配置 */
+.floating-member {
+  position: absolute;
+  width: 120px; /* 画像サイズを統一 */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* メンバーの位置を調整（かぶらないように間隔を開ける） */
+.member1 {
+  top: 100px;
+  left: 20px;
+}
+
+.member2 {
+  top: 300px;
+  left: 30px;
+}
+
+.member3 {
+  top: 500px;
+  left: 20px;
+}
+
+/* 吹き出し */
+.speech-bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95); /* 背景を薄いグレーに */
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  max-width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* 吹き出しの三角形 */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  display: block;
+}
+
+/* 吹き出しの位置調整 */
+.speech1 {
+  top: 110px;
+  left: 160px;
+  background: #f8f9fa; /* さらに見やすく */
+}
+
+.speech1::after {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f8f9fa transparent transparent;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.speech2 {
+  top: 310px;
+  left: 180px;
+  background: #f8f9fa;
+}
+
+.speech2::after {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f8f9fa transparent transparent;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.speech3 {
+  top: 510px;
+  left: 160px;
+  background: #f8f9fa;
+}
+
+.speech3::after {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f8f9fa transparent transparent;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating-member {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0; /* 初期状態では透明 */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.speech-bubble {
+  animation: float 2s infinite ease-in-out;
+}
+
+.countdown-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+@keyframes blink {
+  0% {
+    color: #d9534f;
+  }
+  100% {
+    color: #ff6600;
+  }
+}
+
+#shopping-btn {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+#shopping-btn:hover {
+  background-color: #e65c00;
+}
+
+/* アコーディオン全体 */
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 見出し部分（クリックできる） */
+.accordion-header {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.accordion-header:hover {
+  background: #0056b3;
+}
+
+/* 折りたたまれた内容部分 */
+.accordion-content {
+  display: none; /* 初期状態では非表示 */
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #ddd;
 }

@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>注意事項 & 持ち物リスト</title>
+    <title>1日目 - タイ旅行</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <!-- ▼ ハンバーガーメニューのボタン ▼ -->
+    <!-- ▼ ハンバーガーメニュー ▼ -->
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <!-- ▼ サイドメニュー ▼ -->
     <nav class="side-menu">
       <ul>
         <li><a href="../index.html">🏠 ホーム</a></li>
+        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
+        <li><a href="../extra/index.html">🎁 おまけ</a></li>
         <li><a href="../day1/index.html">📅 1日目</a></li>
         <li><a href="../day2/index.html">📅 2日目</a></li>
         <li><a href="../day3/index.html">📅 3日目</a></li>
@@ -23,120 +24,160 @@
         <li><a href="../day7/index.html">📅 7日目</a></li>
         <li><a href="../day8/index.html">📅 8日目</a></li>
         <li><a href="../day9/index.html">📅 9日目</a></li>
-        <li><a href="../rules/index.html">⚠️ 注意事項 & 持ち物</a></li>
-        <li><a href="../bonus/index.html">🎁 おまけ</a></li>
       </ul>
     </nav>
-    <!-- ▲ ハンバーガーメニュー ここまで ▲ -->
+    <!-- ▲ ハンバーガーメニューここまで ▲ -->
 
     <header>
-      <h1>⚠️ 注意事項 & 持ち物リスト 🎒</h1>
-      <p>このページを見ないで旅立つと…えらいことになります😱</p>
+      <h1>📅 1日目 - いざタイへ出発！</h1>
+      <h1 id="countdown" class="countdown-text">
+        集合時間まで：<span id="time-left"></span>
+      </h1>
     </header>
 
-    <section class="rules">
-      <h2>⚠️ 注意事項</h2>
-      <ul>
-        <li>
-          **王様の話題はNG！**
-          タイの王室をディスると罰せられます。冗談でも言わないように！
-        </li>
-        <li>
-          **お寺は神聖な場所** 🏯
-          短パン・ノースリーブで入ると追い出される可能性アリ！
-        </li>
-        <li>
-          **歩きスマホ禁止** 📵 油断するとバイクタクシーが突っ込んできます💨
-        </li>
-        <li>
-          **トゥクトゥクの値段交渉はガチでやれ！** 🚖
-          最初に言われた金額の半額からスタートしろ！
-        </li>
-        <li>
-          **タイ料理は辛い！** 🌶️「ちょっと辛い」＝「口から火が出る」レベル🔥
-        </li>
-      </ul>
+    <section class="schedule">
+      <h2>📍 集合場所 & 時間</h2>
+      <p>🚉 <strong>集合時間：11:15</strong></p>
+      <p>📍 場所：<strong>中部国際空港（セントレア）</strong></p>
+      <img
+        src="../img/first/go.jpg"
+        alt="集合時間の電車"
+        class="schedule-img"
+      />
     </section>
 
-    <section class="items">
-      <h2>🎒 持ち物リスト（チェックして準備完了！）</h2>
-      <ul id="checklist">
-        <li>
-          <input type="checkbox" id="passport" />
-          <label for="passport"
-            >パスポート & 航空券 🛂（ないと入国できません）</label
-          >
-        </li>
-        <li>
-          <input type="checkbox" id="money" />
-          <label for="money"
-            >現金（タイバーツ）& クレカ 💰（キャッシュレスはまだ未発達）</label
-          >
-        </li>
-        <li>
-          <input type="checkbox" id="battery" />
-          <label for="battery"
-            >モバイルバッテリー 🔋（長時間移動で充電切れ防止）</label
-          >
-        </li>
-        <li>
-          <input type="checkbox" id="sunscreen" />
-          <label for="sunscreen">日焼け止め & 帽子 🏖️（日差しがヤバい）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="mosquito" />
-          <label for="mosquito">虫除けスプレー 🦟（蚊が多い）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="wetwipes" />
-          <label for="wetwipes">ウエットティッシュ 🧻（手を拭く用）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="toiletpaper" />
-          <label for="toiletpaper"
-            >トイレットペーパー 🚽（現地のトイレは紙がないことも）</label
-          >
-        </li>
-        <li>
-          <input type="checkbox" id="swimsuit" />
-          <label for="swimsuit">水着 🩱（ビーチやプールで活躍）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="sandals" />
-          <label for="sandals">ビーチサンダル 👡（靴が濡れないように）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="speaker" />
-          <label for="speaker">スピーカー 🔊（ホテルやビーチで音楽）</label>
-        </li>
-        <li>
-          <input type="checkbox" id="cards" />
-          <label for="cards">トランプ 🃏（移動時間や夜に遊べる）</label>
-        </li>
-      </ul>
+    <button id="shopping-btn">免税店で爆買いする💸</button>
+    <p id="shopping-result"></p>
+
+    <section class="flight">
+      <h2>🛫 搭乗する飛行機</h2>
+      <p>✈️ フライト情報：<strong>中国の危ない飛行機</strong></p>
+      <img
+        src="../img/first/plane.jpg"
+        alt="搭乗する飛行機"
+        class="schedule-img"
+      />
+    </section>
+
+    <!-- ▼ メンバー出現エリア ▼ -->
+    <section class="members">
+      <div class="member-container">
+        <img
+          src="../img/daigo/daigo4.png"
+          alt="加藤大吾"
+          class="floating-member member1"
+        />
+        <div class="speech-bubble speech1">「集合時間送れるなよ！」</div>
+      </div>
+
+      <div class="member-container">
+        <img
+          src="../img/yusei/yusei2.png"
+          alt="佐藤翔理"
+          class="floating-member member2"
+        />
+        <div class="speech-bubble speech2">すまん、ちょっと遅れるかも</div>
+      </div>
+
+      <div class="member-container">
+        <img
+          src="../img/hiroto/hiroto4.png"
+          alt="大野晃英"
+          class="floating-member member3"
+        />
+        <div class="speech-bubble speech3">免税店で爆買いしてこようぜ</div>
+      </div>
+    </section>
+    <!-- ▲ メンバー出現エリアここまで ▲ -->
+
+    <section class="arrival">
+      <h2>タイ到着！深夜の空港ステイ</h2>
+      <p>現地時間 00:55 に <strong>スワンナプーム国際空港</strong> に到着！</p>
+      <p>この時間はまだ移動せず、空港で休む予定。</p>
+
+      <!-- ESIM・SIM切り替え -->
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('esim')">
+          📶 ESIM・SIMの切り替え
+        </div>
+        <div class="accordion-content" id="esim">
+          <ul>
+            <li>
+              ✈️ **Wi-Fi**：無料Wi-Fiはあるが、**接続が不安定** なので注意。
+            </li>
+            <li>
+              📱
+              **ESIMの切り替え**：飛行機を降りたらすぐにデータを切り替えよう！
+            </li>
+            <li>
+              📶 **APN設定の確認**：SIMがつながらない場合、APNを手動で設定する。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 空港で寝る -->
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('sleep')">
+          🛏️ 空港で寝るためのポイント
+        </div>
+        <div class="accordion-content" id="sleep">
+          <ul>
+            <li>
+              💺 **おすすめの寝場所**：制限エリア内のカーペットゾーン or
+              空いているベンチ
+            </li>
+            <li>
+              🎒 **荷物の管理**：スーツケースは足元、バックパックは枕代わりに。
+            </li>
+            <li>
+              🔌
+              **充電スポット**：近くのコンセントを探して、スマホの充電を確保。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 両替 -->
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('exchange')">
+          💰 両替はいつする？
+        </div>
+        <div class="accordion-content" id="exchange">
+          <ul>
+            <li>
+              🛃 **空港の両替は高い！** → 最低限のバーツ（1000THB）だけ両替。
+            </li>
+            <li>
+              🏦
+              **市内で両替**：バンコク市内の両替所（スーパーリッチなど）がレート◎
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- トイレ・シャワー -->
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('shower')">
+          🚻 トイレ・シャワー情報
+        </div>
+        <div class="accordion-content" id="shower">
+          <ul>
+            <li>
+              🚻 **トイレ**：清潔だが紙がない
+              こともあるので、ポケットティッシュを持っておこう！
+            </li>
+            <li>
+              🚿
+              **シャワー**：空港内の有料ラウンジでシャワー利用可能（400THB～）
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <footer>
-      <p>楽しい旅にするために、忘れ物なしで準備しよう！✈️😆</p>
+      <p>✈️ 最高の旅のスタート！集合時間を守ろう！</p>
     </footer>
-
-    <!-- メンバー写真 & 吹き出し -->
-    <div class="member-container">
-      <img
-        src="../img/daigo/daigo3.png"
-        alt="加藤大吾"
-        class="floating-member member1"
-      />
-      <div class="speech-bubble speech1">時間は守ろうね！！</div>
-    </div>
-
-    <div class="member-container">
-      <img
-        src="../img/shori/shori1.png"
-        alt="佐藤翔理"
-        class="floating-member member2"
-      />
-      <div class="speech-bubble speech2">「早く行こうぜ！」</div>
-    </div>
   </body>
 </html>

@@ -1,193 +1,451 @@
-/**{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}*/
-
-h1{
-    margin-top:40px;
-    text-align:center;
-    font-weight:bold;
-    font-size: 24px;
+/* ===== 全体のスタイル ===== */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  /* 背景に home.png を設定（img/second/home.png） */
+  background: url("../img/second/home.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
 }
 
-.line-up {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 60px;
+/* ハンバーガーメニュー */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    gap:15px;
+.menu-icon:hover {
+  background: rgba(0, 0, 0, 1);
 }
 
-.left{
-   /* display:flex;*/
-    flex: 3;
-    margin-left:100px;
-    max-width:650px;
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  transition: left 0.4s ease-in-out;
+  padding-top: 50px;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
-.right{
-    /*display:flex;*/
-    justify-content:flex-end;   
-    flex:1;
-    margin-right:60px;
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-a{
-    font-size:12px;
-    text-decoration:none;
-    color:black;
+.side-menu ul li {
+  text-align: center;
+  padding: 15px;
 }
 
-a:hover{
-    color:blue;
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
 }
 
-.line-style-1 {
-    border: none;
-    border-top: 2px solid #ccc; 
-    margin:0px 100px;
-    margin-bottom:50px;
+.side-menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 
-.main{
-    display:flex;
-    gap:80px;
+/* コンテンツを半透明の枠で包む */
+.content-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.image{
-    flex:1;
-    margin-left:180px;
+/* ヘッダー */
+header {
+  background: rgba(255, 165, 0, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.text{
-    flex:1;
-    margin-right:200px;
+h1 {
+  margin: 0;
 }
 
-.line-style-2{
-    border:none;
-    border-top: 2px solid #ccc; 
+/* フッター */
+footer {
+  background: rgba(255, 165, 0, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-.line-style-3{
-    border:none;
-    border-top: 2px solid #ccc; 
-    margin:14px 0px; 
+.accordion-btn:hover {
+  background: #ff7733;
 }
 
-h2{
-    font-size: 19px;
+.panel {
+  display: none; /* 初期状態は非表示 */
+  background: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.p-1{
-    font-size:13px;
+.intro {
+  margin-bottom: 20px;
 }
 
-.p-2{
-    margin: 27px 0px;
-    font-size:11px;
+.intro p {
+  font-weight: bold;
+  color: #444;
 }
 
+/* 背景に home.png (img/second/home.png) は既に設定済み */
 
-table{
-    width:100%; 
-    border-collapse:collapse;
-    font-size:14px;
-    color:#444;
+/* 3大寺院巡り */
+.temple-tour {
+  margin-top: 30px;
 }
 
-.color,.size{
-    width:20%;
+.temple-tour p {
+  font-weight: bold;
+  color: #444;
 }
 
-.quantity{
-    width:60%;
+.hotel-info {
+  margin-top: 30px;
+  text-align: center;
 }
 
-th{
-    padding:6px 10px;
-    font-weight:normal;
-    text-align: center;
+.hotel-logo {
+  width: 300px;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto 15px;
 }
 
-td{
-    padding:6px 10px;
-    text-align:center;
+.hotel-desc {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.6;
 }
 
-select{
-    width:100%;
+.schedule-img {
+  width: 100%;
+  max-width: 800px; /* ← これを300pxや200pxなど、好みに変更 */
+  border-radius: 10px;
+  margin-top: 10px;
+
+  /* 必要ならサイズ比率を保つ設定 */
+  height: auto;
+  object-fit: cover;
 }
 
-.order-table th,.order-table td{
-    border-right:1px solid #c3c3c3;
+/* 📍 タイムラインのデザイン */
+/* 📍 タイムラインのデザイン */
+.travel-flow {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
 }
 
-.order-table th:last-child,.order-table td:last-child{
-    border-right:none;
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.order-table tr,.order-table th{
-    border-bottom:1px solid #c3c3c3;
+.timeline-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
-.order-table tr:last-child{
-    border-bottom:none;
+.icon {
+  font-size: 30px;
+  margin-right: 10px;
 }
 
-.button{
-    background-color: #444;
-    color:white;
-    text-align:center;
-    padding:14px 141px;
+.arrow {
+  font-size: 24px;
+  margin: 5px 0;
 }
 
-a:hover{
-    color:#f7eb0c;
+/* ⛩️ アコーディオンのデザイン */
+.accordion {
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-.margin{
-    margin:44px 0px;
+.accordion-btn {
+  width: 100%;
+  padding: 15px;
+  background: #ff9800;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-.order-table2{
-    border-collapse:collapse;
-   /* border:1px solid #c3c3c3;*/
-    margin-bottom: 180px;
+.accordion-btn:hover {
+  background: #e68900;
 }
 
-.table2 th,.table2 td{
-    border:1px solid #b2b0b0;
-
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border-left: 3px solid #ff9800;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
-.table2 th{
-    background-color:#ede7e7 ;
+/* 開いた時のアニメーション */
+.accordion-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.table2 td:first-child{
-    background-color:#ede7e7 ;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.p-last{
-    text-align:center;
-    font-size:14px;
+/* 🎤 メンバーのコメントエリア */
+.member-comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 600px;
 }
 
+.member-img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+/* 吹き出しの三角形 */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  transform: translateY(-50%);
+}
 
+/* 🎨 ダイゴの吹き出しをオレンジにする */
+.speech-orange {
+  background: #ffcc80;
+}
 
+.speech-orange::after {
+  border-color: transparent #ffcc80 transparent transparent;
+}
 
+/* 🔽 矢印アニメーション */
+.next-schedule {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 50px auto;
+  color: #333;
+}
 
+.arrow {
+  font-size: 30px;
+  color: #ff6600;
+  animation: bounce 1.5s infinite;
+}
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
 
+/* 🛍️ アイコンサイアムのスタイル */
+#iconsiam {
+  padding: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
-  
+/* 🖼️ アイコンサイアムの画像 */
+.schedule-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 
+/* 🔽 矢印のデザイン（次の日程への区切り） */
+.arrow-divider {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 30px auto;
+  background: #ffa500;
+  color: white;
+  border-radius: 8px;
+  max-width: 400px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
 
+/* 🌙 ナイトクルージングのスタイル */
+#night-cruise {
+  padding: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎥 クルージングの動画（サイズ小さめ） */
+.cruise-video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🏮 ナイトマーケットのセクション */
+#khaosan-night {
+  padding: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🛍️ ナイトマーケットの画像 */
+.market-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎰 ルーレットボタン */
+button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #cc3700;
+}
+
+/* 🎯 ルーレット結果の表示 */
+#roulette-result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ff4500;
+}
+
+/* 🏨 ホテルに戻るセクション */
+#hotel-return {
+  padding: 40px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 🌙 おやすみアニメーション */
+.good-night {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/* 🌙 フェードインアニメーション */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
